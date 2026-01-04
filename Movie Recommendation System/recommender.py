@@ -54,9 +54,9 @@ movie_similarity_df = pd.DataFrame(
 
 
 def find_matching_movies(user_input):
-    """
-    Finds movie titles containing user-entered keywords.
-    """
+    
+    #Finds movie titles containing user entered keywords.
+    
     keywords = [k.strip().lower() for k in user_input.split(",")]
     matched = []
 
@@ -71,9 +71,9 @@ def find_matching_movies(user_input):
 
 
 def recommend_movies_by_preferences(user_input, n=5):
-    """
-    Recommends movies similar to user-entered movies.
-    """
+    
+    #Recommends movies similar to user-entered movies.
+    
     matched_movies = find_matching_movies(user_input)
 
     if not matched_movies:
@@ -95,9 +95,9 @@ def recommend_movies_by_preferences(user_input, n=5):
 
 
 def get_movies_by_genre(selected_genre, n=None):
-    """
-    Returns movies belonging to a selected genre.
-    """
+    
+   #Returns movies belonging to a selected genre.
+    
     if selected_genre not in genres:
         return []
 
@@ -110,9 +110,9 @@ def get_movies_by_genre(selected_genre, n=None):
 
 
 def recommend_movies_in_genre(selected_genre, n=5):
-    """
-    Recommends similar movies within a genre.
-    """
+    
+    #Recommends similar movies within a genre.
+    
     genre_movies = get_movies_by_genre(selected_genre)
 
     if not genre_movies:
